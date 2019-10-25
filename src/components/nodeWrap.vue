@@ -10,10 +10,11 @@ import Node from './node';
 import AddNodeBtn from './addNodeBtn';
 
 export default {
+  name: 'NodeWrap',
   props: {
     nodeType: {
       type: String,
-      default: 'startNode'
+      default: 'start'
     }
   },
   components: {
@@ -22,16 +23,3 @@ export default {
   }
 }
 </script>
-
-<style lang="less" scoped>
-.node-wrap {
-  display: inline-flex;
-  width: 100%;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0 50px;
-  position: relative;
-}
-</style>

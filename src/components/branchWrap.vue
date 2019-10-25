@@ -1,33 +1,25 @@
 <template>
   <div class="branch-wrap">
     <div class="branch-box-wrap">
-      <!-- <AddNodeBtn></AddNodeBtn> -->
+      <BranchBox :conditionNodes="conditionNodes"></BranchBox>
+      <AddNodeBtn></AddNodeBtn>
     </div>
   </div>
 </template>
 
 <script>
-import branchBox from './branchBox'
+import BranchBox from './branchBox'
 import AddNodeBtn from './addNodeBtn';
 export default {
+  props: {
+    conditionNodes: {
+      type: Array,
+      default: () => []
+    }
+  },
   components: {
-    AddNodeBtn
+    AddNodeBtn,
+    BranchBox
   }
 }
 </script>
-
-<style lang="less" scoped>
-.branch-wrap {
-  display: inline-flex;
-  width: 100%;
-}
-.branch-box-wrap {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  min-height: 270px;
-  width: 100%;
-  flex-shrink: 0;
-}
-</style>

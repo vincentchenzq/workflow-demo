@@ -1,0 +1,383 @@
+{
+  "childNode": {
+    "childNode": {
+      "name": "UNKNOWN",
+      "nodeId": "PvUk_B11K",
+      "prevId": "Xie5_X0cU",
+      "properties": {
+        "actionerRules": [
+          {
+            "select": [
+              "allStaff"
+            ],
+            "isEmpty": false,
+            "range": {
+              "approvals": [],
+              "labels": []
+            },
+            "type": "target_select",
+            "key": "manual_gKqR_XUt2",
+            "multi": 1
+          }
+        ]
+      },
+      "type": "notifier",
+      "childNode": {
+        "type": "route",
+        "prevId": "PvUk_B11K",
+        "nodeId": "e87f_9743",
+        "conditionNodes": [
+          {
+            "name": "条件1",
+            "type": "condition",
+            "prevId": "e87f_9743",
+            "nodeId": "76ca_0964",
+            "properties": {
+              "conditions": [
+                [
+                  {
+                    "paramKey": "dingtalk_origin_dept",
+                    "type": "dingtalk_actioner_dept_condition",
+                    "paramLabel": "发起人",
+                    "isEmpty": false,
+                    "conds": [
+                      {
+                        "type": "dept",
+                        "value": 110922361,
+                        "attrs": {
+                          "name": "前端",
+                          "memberCount": 3
+                        }
+                      }
+                    ]
+                  }
+                ]
+              ]
+            },
+            "childNode": {
+              "type": "route",
+              "prevId": "76ca_0964",
+              "nodeId": "52ab_8aff",
+              "conditionNodes": [
+                {
+                  "name": "条件3",
+                  "type": "condition",
+                  "prevId": "52ab_8aff",
+                  "nodeId": "0245_e74a",
+                  "properties": {
+                    "conditions": [
+                      [
+                        {
+                          "paramKey": "dingtalk_origin_dept",
+                          "type": "dingtalk_actioner_dept_condition",
+                          "paramLabel": "发起人",
+                          "isEmpty": false,
+                          "conds": [
+                            {
+                              "type": "dept",
+                              "value": 87716070,
+                              "attrs": {
+                                "name": "测试部",
+                                "memberCount": 15
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    ]
+                  },
+                  "childNode": {
+                    "name": "UNKNOWN",
+                    "type": "approver",
+                    "prevId": "0245_e74a",
+                    "nodeId": "27fa_6d5f",
+                    "properties": {
+                      "activateType": "ONE_BY_ONE",
+                      "agreeAll": false,
+                      "actionerRules": [
+                        {
+                          "type": "target_approval",
+                          "approvals": [
+                            {
+                              "userName": "林晓辉",
+                              "workNo": "010443304226333549"
+                            }
+                          ],
+                          "isEmpty": false
+                        }
+                      ]
+                    },
+                    "childNode": {
+                      "type": "route",
+                      "prevId": "27fa_6d5f",
+                      "nodeId": "79db_8002",
+                      "conditionNodes": [
+                        {
+                          "name": "条件5",
+                          "type": "condition",
+                          "prevId": "79db_8002",
+                          "nodeId": "750e_e365",
+                          "properties": {
+                            "conditions": [
+                              [
+                                {
+                                  "paramKey": "dingtalk_origin_dept",
+                                  "type": "dingtalk_actioner_dept_condition",
+                                  "paramLabel": "发起人",
+                                  "isEmpty": false,
+                                  "conds": [
+                                    {
+                                      "type": "dept",
+                                      "value": 87716070,
+                                      "attrs": {
+                                        "name": "测试部",
+                                        "memberCount": 15
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          },
+                          "childNode": {
+                            "type": "route",
+                            "prevId": "750e_e365",
+                            "nodeId": "8b2f_1e06",
+                            "conditionNodes": [
+                              {
+                                "name": "条件7",
+                                "type": "condition",
+                                "prevId": "8b2f_1e06",
+                                "nodeId": "d0b5_e8da",
+                                "properties": {
+                                  "conditions": [
+                                    [
+                                      {
+                                        "paramKey": "dingtalk_origin_dept",
+                                        "type": "dingtalk_actioner_dept_condition",
+                                        "paramLabel": "发起人",
+                                        "isEmpty": false,
+                                        "conds": [
+                                          {
+                                            "type": "dept",
+                                            "value": 87716070,
+                                            "attrs": {
+                                              "name": "测试部",
+                                              "memberCount": 15
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  ]
+                                }
+                              },
+                              {
+                                "name": "条件8",
+                                "type": "condition",
+                                "prevId": "8b2f_1e06",
+                                "nodeId": "4388_d379",
+                                "properties": {
+                                  "conditions": []
+                                }
+                              }
+                            ],
+                            "properties": {}
+                          }
+                        },
+                        {
+                          "name": "条件6",
+                          "type": "condition",
+                          "prevId": "79db_8002",
+                          "nodeId": "b1da_561f",
+                          "properties": {
+                            "conditions": []
+                          },
+                          "childNode": {
+                            "name": "UNKNOWN",
+                            "type": "notifier",
+                            "prevId": "b1da_561f",
+                            "nodeId": "2342_b778",
+                            "properties": {
+                              "actionerRules": [
+                                {
+                                  "type": "target_approval",
+                                  "approvals": [
+                                    {
+                                      "userName": "马大帅",
+                                      "workNo": "123641654238721834"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "target_approval",
+                                  "approvals": [
+                                    {
+                                      "userName": "大花",
+                                      "workNo": "2352014562740970"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "target_approval",
+                                  "approvals": [
+                                    {
+                                      "userName": "利妙凤",
+                                      "workNo": "manager5783"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "target_approval",
+                                  "approvals": [
+                                    {
+                                      "userName": "杨丽丽",
+                                      "workNo": "190412166726080520"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "target_approval",
+                                  "approvals": [
+                                    {
+                                      "userName": "小泡沫",
+                                      "workNo": "290130190723539769"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "select": [
+                                    "allStaff"
+                                  ],
+                                  "range": {
+                                    "allStaff": null
+                                  },
+                                  "multi": 1,
+                                  "type": "target_select",
+                                  "key": "manual_2342_b778_a4e7_8d54"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "properties": {}
+                    }
+                  }
+                },
+                {
+                  "name": "条件4",
+                  "type": "condition",
+                  "prevId": "52ab_8aff",
+                  "nodeId": "d5b9_59c8",
+                  "properties": {
+                    "conditions": []
+                  }
+                }
+              ],
+              "properties": {}
+            }
+          },
+          {
+            "name": "条件2",
+            "type": "condition",
+            "prevId": "e87f_9743",
+            "nodeId": "81f6_0338",
+            "properties": {
+              "conditions": [
+                []
+              ]
+            },
+            "childNode": {
+              "name": "UNKNOWN",
+              "type": "notifier",
+              "prevId": "81f6_0338",
+              "nodeId": "c425_0de2",
+              "properties": {
+                "actionerRules": [
+                  {
+                    "type": "target_approval",
+                    "approvals": [
+                      {
+                        "userName": "马大帅",
+                        "workNo": "123641654238721834"
+                      }
+                    ]
+                  },
+                  {
+                    "select": [
+                      "allStaff"
+                    ],
+                    "range": {
+                      "allStaff": null
+                    },
+                    "multi": 1,
+                    "type": "target_select",
+                    "key": "manual_c425_0de2_90a9_3a83"
+                  }
+                ]
+              },
+              "childNode": {
+                "name": "UNKNOWN",
+                "type": "notifier",
+                "prevId": "c425_0de2",
+                "nodeId": "6e77_a6f5",
+                "properties": {
+                  "actionerRules": [
+                    {
+                      "type": "target_approval",
+                      "approvals": [
+                        {
+                          "userName": "马大帅",
+                          "workNo": "123641654238721834"
+                        }
+                      ]
+                    },
+                    {
+                      "select": [
+                        "allStaff"
+                      ],
+                      "range": {
+                        "allStaff": null
+                      },
+                      "multi": 1,
+                      "type": "target_select",
+                      "key": "manual_6e77_a6f5_b6e8_fa7f"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "properties": {}
+      }
+    },
+    "name": "UNKNOWN",
+    "nodeId": "Xie5_X0cU",
+    "prevId": "sid-startevent",
+    "properties": {
+      "actionerRules": [
+        {
+          "select": [
+            "allStaff"
+          ],
+          "isEmpty": false,
+          "range": {
+            "approvals": [],
+            "labels": []
+          },
+          "type": "target_select",
+          "key": "manual_L8Ya_dJxs",
+          "multi": 1
+        }
+      ],
+      "activateType": "ONE_BY_ONE",
+      "agreeAll": false
+    },
+    "type": "approver"
+  },
+  "name": "发起人",
+  "nodeId": "sid-startevent",
+  "type": "start"
+}
