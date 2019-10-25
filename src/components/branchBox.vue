@@ -21,9 +21,20 @@
             <AddNodeBtn></AddNodeBtn>
           </div>
         </div>
-        <BranchWrap :conditionNodes="item.childNode.conditionNodes" v-if="isRoute(item)"></BranchWrap>
+        <!-- TODO -->
+        <template v-for="(it,idx) in getNodeList(item)">
+          <!-- <BranchWrap :conditionNodes="it.childNode.conditionNodes" v-if="isRoute(it)"></BranchWrap> -->
+          <BranchWrap v-if="isRoute(it)">
+            <BranchBox :conditionNodes="it.childNode.conditionNodes"></BranchBox>
+            <AddNodeBtn></AddNodeBtn>
+          </BranchWrap>
+          <!-- <NodeWrap :nodeType="it.childNode.type" v-if="isNode(it)"></NodeWrap> -->
+          <NodeWrap v-if="isNode(it)">
+            <Node :nodeType="it.childNode.type"></Node>
+            <AddNodeBtn></AddNodeBtn>
+          </NodeWrap>
+        </template>
 
-        <NodeWrap :nodeType="item.childNode.type" v-if="isNode(item)"></NodeWrap>
         <div class="top-right-cover-line" v-if="index === conditionNodes.length-1"></div>
         <div class="bottom-right-cover-line" v-if="index === conditionNodes.length-1"></div>
       </div>
@@ -35,7 +46,9 @@
 import AddNodeBtn from './addNodeBtn';
 import BranchWrap from './branchWrap';
 import NodeWrap from './nodeWrap';
+import Node from './node';
 export default {
+  name: "BranchBox",
   props: {
     conditionNodes: {
       type: Array,
@@ -43,9 +56,6 @@ export default {
     }
   },
   methods: {
-    isRight(index) {
-      return index > (this.conditionNodes.length / 2)
-    },
     hasChild(item) {
       return !!item.childNode
     },
@@ -54,12 +64,36 @@ export default {
     },
     isRoute(item) {
       return this.hasChild(item) && item.childNode.type === 'route'
+    },
+    // 获取树形数据的node节点
+    getNodeList(item) {
+      function isNode(data) {
+        return data.type !== 'route'
+      }
+      function isRoute(data) {
+        return data.type === 'route'
+      }
+      var result = [];
+      var flatArr = function (dataJson) {
+        if (isNode(dataJson)) {
+          result.push(dataJson);
+          if (dataJson.childNode) {
+            flatArr(dataJson.childNode)
+          }
+        }
+        if (isRoute(dataJson)) {
+          result.push(dataJson)
+        }
+      }
+      flatArr(item);
+      return result
     }
   },
   components: {
     AddNodeBtn,
     BranchWrap,
-    NodeWrap
+    NodeWrap,
+    Node
   }
 }
 </script>

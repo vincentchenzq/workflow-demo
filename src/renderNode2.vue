@@ -43,19 +43,21 @@ export default {
       }
     }
     flatArr(dataJson);
-    console.log(result)
     return <div>
       {result.map(res => {
         if (isNode(res)) {
           return (
-            <div class="node-wrap">
-              <Node {...{ props: { nodeType: res.type } }} ></Node>
+            <NodeWrap>
+              <Node {...{ props: { nodeType: res.type } }}></Node>
               <AddNodeBtn></AddNodeBtn>
-            </div>
+            </NodeWrap>
           )
         }
         if (isRoute(res)) {
-          return (<BranchWrap {...{ props: { conditionNodes: res.conditionNodes } }} />)
+          return (<BranchWrap {...{ props: { conditionNodes: res.conditionNodes } }} >
+            <BranchBox {...{ props: { conditionNodes: res.conditionNodes } }}></BranchBox>
+            <AddNodeBtn></AddNodeBtn>
+          </BranchWrap>)
         }
       })}
     </div>
