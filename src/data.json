@@ -1,383 +1,2442 @@
 {
-  "childNode": {
-    "childNode": {
-      "name": "UNKNOWN",
-      "nodeId": "PvUk_B11K",
-      "prevId": "Xie5_X0cU",
-      "properties": {
-        "actionerRules": [
-          {
-            "select": [
-              "allStaff"
-            ],
-            "isEmpty": false,
-            "range": {
-              "approvals": [],
-              "labels": []
-            },
-            "type": "target_select",
-            "key": "manual_gKqR_XUt2",
-            "multi": 1
-          }
-        ]
+  "Successful": true,
+  "ErrorMessage": null,
+  "Logined": true,
+  "ReturnData": {
+    "Data": {
+      "WorkflowVersion": 27,
+      "WorkflowCode": "D0001595a5176b083534880969db0d5284abd14",
+      "SchemaCode": "D0001595a5176b083534880969db0d5284abd14",
+      "ClauseName": "CZQ表单",
+      "Package": {
+        "SchemaCode": "D0001595a5176b083534880969db0d5284abd14"
       },
-      "type": "notifier",
-      "childNode": {
-        "type": "route",
-        "prevId": "PvUk_B11K",
-        "nodeId": "e87f_9743",
-        "conditionNodes": [
+      "IsSaasApp": false,
+      "FirstActivityCode": "Activity84",
+      "AppCode": "D000159czq123",
+      "PresetFields": [],
+      "FormulaFields": [],
+      "WorkflowTemplate": {
+        "StartWithForm": false,
+        "TemplateType": 0,
+        "StartActivityCode": null,
+        "EndActivityCode": null,
+        "StartActivity": null,
+        "EndActivity": null,
+        "WorkflowVersion": 0,
+        "WorkflowFullName": "D0001595a5176b083534880969db0d5284abd14.0",
+        "Description": "",
+        "PlanUsedTime": "",
+        "Height": 0,
+        "Width": 0,
+        "SchemaCode": "D0001595a5176b083534880969db0d5284abd14",
+        "Activities": [
           {
-            "name": "条件1",
-            "type": "condition",
-            "prevId": "e87f_9743",
-            "nodeId": "76ca_0964",
-            "properties": {
-              "conditions": [
-                [
-                  {
-                    "paramKey": "dingtalk_origin_dept",
-                    "type": "dingtalk_actioner_dept_condition",
-                    "paramLabel": "发起人",
-                    "isEmpty": false,
-                    "conds": [
-                      {
-                        "type": "dept",
-                        "value": 110922361,
-                        "attrs": {
-                          "name": "前端",
-                          "memberCount": 3
-                        }
-                      }
-                    ]
-                  }
-                ]
-              ]
-            },
-            "childNode": {
-              "type": "route",
-              "prevId": "76ca_0964",
-              "nodeId": "52ab_8aff",
-              "conditionNodes": [
-                {
-                  "name": "条件3",
-                  "type": "condition",
-                  "prevId": "52ab_8aff",
-                  "nodeId": "0245_e74a",
-                  "properties": {
-                    "conditions": [
-                      [
-                        {
-                          "paramKey": "dingtalk_origin_dept",
-                          "type": "dingtalk_actioner_dept_condition",
-                          "paramLabel": "发起人",
-                          "isEmpty": false,
-                          "conds": [
-                            {
-                              "type": "dept",
-                              "value": 87716070,
-                              "attrs": {
-                                "name": "测试部",
-                                "memberCount": 15
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    ]
-                  },
-                  "childNode": {
-                    "name": "UNKNOWN",
-                    "type": "approver",
-                    "prevId": "0245_e74a",
-                    "nodeId": "27fa_6d5f",
-                    "properties": {
-                      "activateType": "ONE_BY_ONE",
-                      "agreeAll": false,
-                      "actionerRules": [
-                        {
-                          "type": "target_approval",
-                          "approvals": [
-                            {
-                              "userName": "林晓辉",
-                              "workNo": "010443304226333549"
-                            }
-                          ],
-                          "isEmpty": false
-                        }
-                      ]
-                    },
-                    "childNode": {
-                      "type": "route",
-                      "prevId": "27fa_6d5f",
-                      "nodeId": "79db_8002",
-                      "conditionNodes": [
-                        {
-                          "name": "条件5",
-                          "type": "condition",
-                          "prevId": "79db_8002",
-                          "nodeId": "750e_e365",
-                          "properties": {
-                            "conditions": [
-                              [
-                                {
-                                  "paramKey": "dingtalk_origin_dept",
-                                  "type": "dingtalk_actioner_dept_condition",
-                                  "paramLabel": "发起人",
-                                  "isEmpty": false,
-                                  "conds": [
-                                    {
-                                      "type": "dept",
-                                      "value": 87716070,
-                                      "attrs": {
-                                        "name": "测试部",
-                                        "memberCount": 15
-                                      }
-                                    }
-                                  ]
-                                }
-                              ]
-                            ]
-                          },
-                          "childNode": {
-                            "type": "route",
-                            "prevId": "750e_e365",
-                            "nodeId": "8b2f_1e06",
-                            "conditionNodes": [
-                              {
-                                "name": "条件7",
-                                "type": "condition",
-                                "prevId": "8b2f_1e06",
-                                "nodeId": "d0b5_e8da",
-                                "properties": {
-                                  "conditions": [
-                                    [
-                                      {
-                                        "paramKey": "dingtalk_origin_dept",
-                                        "type": "dingtalk_actioner_dept_condition",
-                                        "paramLabel": "发起人",
-                                        "isEmpty": false,
-                                        "conds": [
-                                          {
-                                            "type": "dept",
-                                            "value": 87716070,
-                                            "attrs": {
-                                              "name": "测试部",
-                                              "memberCount": 15
-                                            }
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  ]
-                                }
-                              },
-                              {
-                                "name": "条件8",
-                                "type": "condition",
-                                "prevId": "8b2f_1e06",
-                                "nodeId": "4388_d379",
-                                "properties": {
-                                  "conditions": []
-                                }
-                              }
-                            ],
-                            "properties": {}
-                          }
-                        },
-                        {
-                          "name": "条件6",
-                          "type": "condition",
-                          "prevId": "79db_8002",
-                          "nodeId": "b1da_561f",
-                          "properties": {
-                            "conditions": []
-                          },
-                          "childNode": {
-                            "name": "UNKNOWN",
-                            "type": "notifier",
-                            "prevId": "b1da_561f",
-                            "nodeId": "2342_b778",
-                            "properties": {
-                              "actionerRules": [
-                                {
-                                  "type": "target_approval",
-                                  "approvals": [
-                                    {
-                                      "userName": "马大帅",
-                                      "workNo": "123641654238721834"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "target_approval",
-                                  "approvals": [
-                                    {
-                                      "userName": "大花",
-                                      "workNo": "2352014562740970"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "target_approval",
-                                  "approvals": [
-                                    {
-                                      "userName": "利妙凤",
-                                      "workNo": "manager5783"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "target_approval",
-                                  "approvals": [
-                                    {
-                                      "userName": "杨丽丽",
-                                      "workNo": "190412166726080520"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "target_approval",
-                                  "approvals": [
-                                    {
-                                      "userName": "小泡沫",
-                                      "workNo": "290130190723539769"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "select": [
-                                    "allStaff"
-                                  ],
-                                  "range": {
-                                    "allStaff": null
-                                  },
-                                  "multi": 1,
-                                  "type": "target_select",
-                                  "key": "manual_2342_b778_a4e7_8d54"
-                                }
-                              ]
-                            }
-                          }
-                        }
-                      ],
-                      "properties": {}
-                    }
-                  }
-                },
-                {
-                  "name": "条件4",
-                  "type": "condition",
-                  "prevId": "52ab_8aff",
-                  "nodeId": "d5b9_59c8",
-                  "properties": {
-                    "conditions": []
-                  }
-                }
-              ],
-              "properties": {}
-            }
+            "ActivityType": 0,
+            "DisplayName": "开始",
+            "DefaultDisplayName": "开始",
+            "ToolTipText": "Start",
+            "ActivityCode": "Activity2",
+            "SortKey": 0,
+            "Height": 42,
+            "Width": 122,
+            "X": 252,
+            "Y": 51,
+            "IsActivity": true,
+            "IsRule": false,
+            "IsEnd": false,
+            "IsApproveActivity": false,
+            "IsClient": false,
+            "EntryCondition": 1,
+            "FullName": "开始[Activity2]",
+            "FontSize": 12,
+            "FontColor": "",
+            "Id": 1
           },
           {
-            "name": "条件2",
-            "type": "condition",
-            "prevId": "e87f_9743",
-            "nodeId": "81f6_0338",
-            "properties": {
-              "conditions": [
-                []
-              ]
-            },
-            "childNode": {
-              "name": "UNKNOWN",
-              "type": "notifier",
-              "prevId": "81f6_0338",
-              "nodeId": "c425_0de2",
-              "properties": {
-                "actionerRules": [
-                  {
-                    "type": "target_approval",
-                    "approvals": [
-                      {
-                        "userName": "马大帅",
-                        "workNo": "123641654238721834"
-                      }
-                    ]
-                  },
-                  {
-                    "select": [
-                      "allStaff"
-                    ],
-                    "range": {
-                      "allStaff": null
-                    },
-                    "multi": 1,
-                    "type": "target_select",
-                    "key": "manual_c425_0de2_90a9_3a83"
-                  }
-                ]
+            "ActivityType": 1,
+            "PropertyPermissions": [
+              {
+                "PropertyName": "ObjectId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
               },
-              "childNode": {
-                "name": "UNKNOWN",
-                "type": "notifier",
-                "prevId": "c425_0de2",
-                "nodeId": "6e77_a6f5",
-                "properties": {
-                  "actionerRules": [
+              {
+                "PropertyName": "Name",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "CreatedBy",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "OwnerId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": true,
+                "Printable": true
+              },
+              {
+                "PropertyName": "OwnerDeptId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": true,
+                "Printable": true
+              },
+              {
+                "PropertyName": "CreatedTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "ModifiedBy",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "ModifiedTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "WorkflowInstanceId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "Status",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "F0000001",
+                "Visible": true,
+                "Editable": true,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintCompanyName",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintComment",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "Printer",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintQrCode",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              }
+            ],
+            "Actions": [
+              {
+                "Code": "Submit",
+                "Name": "提交",
+                "DefaultName": "提交",
+                "IsActive": true,
+                "SortKey": 1,
+                "CommentConfig": null
+              }
+            ],
+            "WorkItemDisplayName": "",
+            "DisplayName": "结束",
+            "DefaultDisplayName": "结束",
+            "ToolTipText": "End",
+            "ActivityCode": "Activity4",
+            "SortKey": 0,
+            "Height": 42,
+            "Width": 122,
+            "X": 252,
+            "Y": 654,
+            "IsActivity": true,
+            "IsRule": false,
+            "IsEnd": true,
+            "IsApproveActivity": false,
+            "IsClient": false,
+            "EntryCondition": 1,
+            "FullName": "结束[Activity4]",
+            "FontSize": 13,
+            "FontColor": "",
+            "Id": 4
+          },
+          {
+            "ActivityType": 3,
+            "IsFirstActivity": false,
+            "ApproveExit": "100%",
+            "FinishExit": "1",
+            "PermittedActions": {
+              "Flag": 2305,
+              "Forward": true,
+              "Consult": false,
+              "Backward": false,
+              "Choose": false,
+              "Jump": false,
+              "RejectToStart": false,
+              "Reject": false,
+              "RejectToAny": false,
+              "RejectToFixed": false,
+              "SubmitToRejectedActivity": false,
+              "RejectToActivityCodes": [],
+              "CancelIfUnfinished": false,
+              "CancelIfFinished": false,
+              "Retrieve": true,
+              "Cancel": false,
+              "Suspend": false,
+              "ViewInstanceState": true,
+              "AdjustParticipant": false,
+              "Circulate": false,
+              "Recirculate": false,
+              "ViewData": false,
+              "Assist": false,
+              "FinishInstance": false,
+              "PreviewParticipant": false
+            },
+            "ParticipateMethod": 0,
+            "Actions": [
+              {
+                "Code": "Save",
+                "Name": "暂存",
+                "DefaultName": "暂存",
+                "IsActive": true,
+                "SortKey": 0,
+                "CommentConfig": null
+              },
+              {
+                "Code": "Submit",
+                "Name": "提交",
+                "DefaultName": "提交",
+                "IsActive": true,
+                "SortKey": 1,
+                "CommentConfig": null
+              },
+              {
+                "Code": "Forward",
+                "Name": "转交",
+                "DefaultName": "转交",
+                "IsActive": true,
+                "SortKey": 2,
+                "CommentConfig": null
+              }
+            ],
+            "WorkItemDisplayName": "",
+            "PropertyPermissions": [
+              {
+                "PropertyName": "CreatedBy",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "OwnerId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "OwnerDeptId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "CreatedTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "ModifiedTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "F0000001",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintCompanyName",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintComment",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "Printer",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintQrCode",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              }
+            ],
+            "DuplicatedParticipantPolicy": 0,
+            "NoParticipantPolicy": 0,
+            "AllowedTime": "",
+            "TimeoutRemindContent": "",
+            "TimeoutMode": 1,
+            "Participants": "{Originator}",
+            "ParticipateType": 2,
+            "ParticipantSourceType": 0,
+            "DisplayName": "发起人",
+            "DefaultDisplayName": "发起人",
+            "ToolTipText": "FillSheet",
+            "ActivityCode": "Activity84",
+            "SortKey": 0,
+            "Height": 42,
+            "Width": 122,
+            "X": 252,
+            "Y": 124,
+            "IsActivity": true,
+            "IsRule": false,
+            "IsEnd": false,
+            "IsApproveActivity": false,
+            "IsClient": true,
+            "EntryCondition": 0,
+            "FullName": "发起人[Activity84]",
+            "FontSize": 14,
+            "FontColor": "",
+            "Id": 84
+          },
+          {
+            "ActivityType": 4,
+            "ApproveExit": "100%",
+            "DisapproveExit": "1",
+            "DisapproveExitType": 1,
+            "DisapproveExitActivityCode": "",
+            "FinishExit": "1",
+            "PermittedActions": {
+              "Flag": 67841,
+              "Forward": true,
+              "Consult": false,
+              "Backward": false,
+              "Choose": false,
+              "Jump": false,
+              "RejectToStart": false,
+              "Reject": true,
+              "RejectToAny": false,
+              "RejectToFixed": false,
+              "SubmitToRejectedActivity": false,
+              "RejectToActivityCodes": [],
+              "CancelIfUnfinished": false,
+              "CancelIfFinished": false,
+              "Retrieve": true,
+              "Cancel": false,
+              "Suspend": false,
+              "ViewInstanceState": true,
+              "AdjustParticipant": false,
+              "Circulate": false,
+              "Recirculate": false,
+              "ViewData": false,
+              "Assist": false,
+              "FinishInstance": false,
+              "PreviewParticipant": false
+            },
+            "ParticipateMethod": 0,
+            "Actions": [
+              {
+                "Code": "Submit",
+                "Name": "同意",
+                "DefaultName": "同意",
+                "IsActive": true,
+                "SortKey": 0,
+                "CommentConfig": {
+                  "Items": [
                     {
-                      "type": "target_approval",
-                      "approvals": [
-                        {
-                          "userName": "马大帅",
-                          "workNo": "123641654238721834"
-                        }
-                      ]
+                      "Code": "Text",
+                      "Name": "审批意见",
+                      "Active": true,
+                      "Require": false
                     },
                     {
-                      "select": [
-                        "allStaff"
-                      ],
-                      "range": {
-                        "allStaff": null
-                      },
-                      "multi": 1,
-                      "type": "target_select",
-                      "key": "manual_6e77_a6f5_b6e8_fa7f"
+                      "Code": "Signature",
+                      "Name": "签名",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Picture",
+                      "Name": "图片",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Attachment",
+                      "Name": "附件",
+                      "Active": true,
+                      "Require": false
+                    }
+                  ]
+                }
+              },
+              {
+                "Code": "Reject",
+                "Name": "不同意",
+                "DefaultName": "不同意",
+                "IsActive": true,
+                "SortKey": 1,
+                "CommentConfig": {
+                  "Items": [
+                    {
+                      "Code": "Text",
+                      "Name": "审批意见",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Signature",
+                      "Name": "签名",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Picture",
+                      "Name": "图片",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Attachment",
+                      "Name": "附件",
+                      "Active": true,
+                      "Require": false
+                    }
+                  ]
+                }
+              },
+              {
+                "Code": "Forward",
+                "Name": "转交",
+                "DefaultName": "转交",
+                "IsActive": true,
+                "SortKey": 2,
+                "CommentConfig": {
+                  "Items": [
+                    {
+                      "Code": "Text",
+                      "Name": "审批意见",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Signature",
+                      "Name": "签名",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Picture",
+                      "Name": "图片",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Attachment",
+                      "Name": "附件",
+                      "Active": true,
+                      "Require": false
+                    }
+                  ]
+                }
+              },
+              {
+                "Code": "Save",
+                "Name": "暂存",
+                "DefaultName": "暂存",
+                "IsActive": true,
+                "SortKey": 3,
+                "CommentConfig": {
+                  "Items": [
+                    {
+                      "Code": "Text",
+                      "Name": "审批意见",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Signature",
+                      "Name": "签名",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Picture",
+                      "Name": "图片",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Attachment",
+                      "Name": "附件",
+                      "Active": true,
+                      "Require": false
                     }
                   ]
                 }
               }
-            }
+            ],
+            "WorkItemDisplayName": "",
+            "PropertyPermissions": [
+              {
+                "PropertyName": "CreatedBy",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "OwnerId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "OwnerDeptId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "CreatedTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "ModifiedTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "F0000001",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintCompanyName",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintComment",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "Printer",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintQrCode",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              }
+            ],
+            "DuplicatedParticipantPolicy": 0,
+            "NoParticipantPolicy": 0,
+            "AllowedTime": "",
+            "TimeoutRemindContent": "",
+            "TimeoutMode": 1,
+            "Participants": "",
+            "ParticipateType": 2,
+            "ParticipantSourceType": 0,
+            "DisplayName": "审批人1",
+            "DefaultDisplayName": "审批人1",
+            "ToolTipText": "Approve",
+            "ActivityCode": "Activity107",
+            "SortKey": 0,
+            "Height": 42,
+            "Width": 122,
+            "X": 91,
+            "Y": 399,
+            "IsActivity": true,
+            "IsRule": false,
+            "IsEnd": false,
+            "IsApproveActivity": true,
+            "IsClient": true,
+            "EntryCondition": 0,
+            "FullName": "审批人1[Activity107]",
+            "FontSize": 14,
+            "FontColor": "",
+            "Id": 107
+          },
+          {
+            "ActivityType": 4,
+            "ApproveExit": "100%",
+            "DisapproveExit": "1",
+            "DisapproveExitType": 1,
+            "DisapproveExitActivityCode": "",
+            "FinishExit": "1",
+            "PermittedActions": {
+              "Flag": 67841,
+              "Forward": true,
+              "Consult": false,
+              "Backward": false,
+              "Choose": false,
+              "Jump": false,
+              "RejectToStart": false,
+              "Reject": true,
+              "RejectToAny": false,
+              "RejectToFixed": false,
+              "SubmitToRejectedActivity": false,
+              "RejectToActivityCodes": [],
+              "CancelIfUnfinished": false,
+              "CancelIfFinished": false,
+              "Retrieve": true,
+              "Cancel": false,
+              "Suspend": false,
+              "ViewInstanceState": true,
+              "AdjustParticipant": false,
+              "Circulate": false,
+              "Recirculate": false,
+              "ViewData": false,
+              "Assist": false,
+              "FinishInstance": false,
+              "PreviewParticipant": false
+            },
+            "ParticipateMethod": 0,
+            "Actions": [
+              {
+                "Code": "Submit",
+                "Name": "同意",
+                "DefaultName": "同意",
+                "IsActive": true,
+                "SortKey": 0,
+                "CommentConfig": {
+                  "Items": [
+                    {
+                      "Code": "Text",
+                      "Name": "审批意见",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Signature",
+                      "Name": "签名",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Picture",
+                      "Name": "图片",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Attachment",
+                      "Name": "附件",
+                      "Active": true,
+                      "Require": false
+                    }
+                  ]
+                }
+              },
+              {
+                "Code": "Reject",
+                "Name": "不同意",
+                "DefaultName": "不同意",
+                "IsActive": true,
+                "SortKey": 1,
+                "CommentConfig": {
+                  "Items": [
+                    {
+                      "Code": "Text",
+                      "Name": "审批意见",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Signature",
+                      "Name": "签名",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Picture",
+                      "Name": "图片",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Attachment",
+                      "Name": "附件",
+                      "Active": true,
+                      "Require": false
+                    }
+                  ]
+                }
+              },
+              {
+                "Code": "Forward",
+                "Name": "转交",
+                "DefaultName": "转交",
+                "IsActive": true,
+                "SortKey": 2,
+                "CommentConfig": {
+                  "Items": [
+                    {
+                      "Code": "Text",
+                      "Name": "审批意见",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Signature",
+                      "Name": "签名",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Picture",
+                      "Name": "图片",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Attachment",
+                      "Name": "附件",
+                      "Active": true,
+                      "Require": false
+                    }
+                  ]
+                }
+              },
+              {
+                "Code": "Save",
+                "Name": "暂存",
+                "DefaultName": "暂存",
+                "IsActive": true,
+                "SortKey": 3,
+                "CommentConfig": {
+                  "Items": [
+                    {
+                      "Code": "Text",
+                      "Name": "审批意见",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Signature",
+                      "Name": "签名",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Picture",
+                      "Name": "图片",
+                      "Active": true,
+                      "Require": false
+                    },
+                    {
+                      "Code": "Attachment",
+                      "Name": "附件",
+                      "Active": true,
+                      "Require": false
+                    }
+                  ]
+                }
+              }
+            ],
+            "WorkItemDisplayName": "",
+            "PropertyPermissions": [
+              {
+                "PropertyName": "CreatedBy",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "OwnerId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "OwnerDeptId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "CreatedTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "ModifiedTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "F0000001",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintCompanyName",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintComment",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "Printer",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintQrCode",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              }
+            ],
+            "DuplicatedParticipantPolicy": 0,
+            "NoParticipantPolicy": 0,
+            "AllowedTime": "",
+            "TimeoutRemindContent": "",
+            "TimeoutMode": 1,
+            "Participants": "",
+            "ParticipateType": 2,
+            "ParticipantSourceType": 0,
+            "DisplayName": "审批节点",
+            "DefaultDisplayName": "审批节点",
+            "ToolTipText": "Approve",
+            "ActivityCode": "Activity114",
+            "SortKey": 0,
+            "Height": 42,
+            "Width": 122,
+            "X": 252,
+            "Y": 582,
+            "IsActivity": true,
+            "IsRule": false,
+            "IsEnd": false,
+            "IsApproveActivity": true,
+            "IsClient": true,
+            "EntryCondition": 0,
+            "FullName": "审批节点[Activity114]",
+            "FontSize": 14,
+            "FontColor": "",
+            "Id": 114
+          },
+          {
+            "ActivityType": 25,
+            "ParticipateType": 3,
+            "WorkItemDisplayName": "",
+            "PropertyPermissions": [
+              {
+                "PropertyName": "ObjectId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "CreatedBy",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "OwnerId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "OwnerDeptId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "CreatedTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "ModifiedTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "F0000001",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintCompanyName",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintComment",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "Printer",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintQrCode",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              }
+            ],
+            "DuplicatedParticipantPolicy": 0,
+            "NoParticipantPolicy": 0,
+            "AllowedTime": "",
+            "TimeoutRemindContent": "",
+            "TimeoutMode": 1,
+            "Participants": "u(6613087e-b838-4a9c-96f4-703c3244301d)",
+            "ParticipantSourceType": 0,
+            "DisplayName": "抄送人1",
+            "DefaultDisplayName": "抄送人1",
+            "ToolTipText": "Circulate",
+            "ActivityCode": "Activity100",
+            "SortKey": 0,
+            "Height": 42,
+            "Width": 122,
+            "X": 252,
+            "Y": 220,
+            "IsActivity": true,
+            "IsRule": false,
+            "IsEnd": false,
+            "IsApproveActivity": false,
+            "IsClient": false,
+            "EntryCondition": 0,
+            "FullName": "抄送人1[Activity100]",
+            "FontSize": 14,
+            "FontColor": "",
+            "Id": 100
+          },
+          {
+            "ActivityType": 25,
+            "ParticipateType": 3,
+            "WorkItemDisplayName": "",
+            "PropertyPermissions": [
+              {
+                "PropertyName": "ObjectId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "CreatedBy",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "OwnerId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "OwnerDeptId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "CreatedTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "ModifiedTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "F0000001",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintCompanyName",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintComment",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "Printer",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintQrCode",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              }
+            ],
+            "DuplicatedParticipantPolicy": 0,
+            "NoParticipantPolicy": 0,
+            "AllowedTime": "",
+            "TimeoutRemindContent": "",
+            "TimeoutMode": 1,
+            "Participants": "",
+            "ParticipantSourceType": 0,
+            "DisplayName": "抄送人2",
+            "DefaultDisplayName": "抄送人2",
+            "ToolTipText": "Circulate",
+            "ActivityCode": "Activity102",
+            "SortKey": 0,
+            "Height": 42,
+            "Width": 122,
+            "X": 135,
+            "Y": 301,
+            "IsActivity": true,
+            "IsRule": false,
+            "IsEnd": false,
+            "IsApproveActivity": false,
+            "IsClient": false,
+            "EntryCondition": 0,
+            "FullName": "抄送人2[Activity102]",
+            "FontSize": 14,
+            "FontColor": "",
+            "Id": 102
+          },
+          {
+            "ActivityType": 25,
+            "ParticipateType": 3,
+            "WorkItemDisplayName": "",
+            "PropertyPermissions": [
+              {
+                "PropertyName": "ObjectId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "CreatedBy",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "OwnerId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "OwnerDeptId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "CreatedTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "ModifiedTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "F0000001",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintCompanyName",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintComment",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "Printer",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintQrCode",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              }
+            ],
+            "DuplicatedParticipantPolicy": 0,
+            "NoParticipantPolicy": 0,
+            "AllowedTime": "",
+            "TimeoutRemindContent": "",
+            "TimeoutMode": 1,
+            "Participants": "",
+            "ParticipantSourceType": 0,
+            "DisplayName": "抄送人3",
+            "DefaultDisplayName": "抄送人3",
+            "ToolTipText": "Circulate",
+            "ActivityCode": "Activity103",
+            "SortKey": 0,
+            "Height": 42,
+            "Width": 122,
+            "X": 476,
+            "Y": 315,
+            "IsActivity": true,
+            "IsRule": false,
+            "IsEnd": false,
+            "IsApproveActivity": false,
+            "IsClient": false,
+            "EntryCondition": 0,
+            "FullName": "抄送人3[Activity103]",
+            "FontSize": 14,
+            "FontColor": "",
+            "Id": 103
+          },
+          {
+            "ActivityType": 25,
+            "ParticipateType": 3,
+            "WorkItemDisplayName": "",
+            "PropertyPermissions": [
+              {
+                "PropertyName": "ObjectId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "CreatedBy",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "OwnerId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "OwnerDeptId",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "CreatedTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "ModifiedTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "F0000001",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintCompanyName",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintComment",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "Printer",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintTime",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              },
+              {
+                "PropertyName": "PrintQrCode",
+                "Visible": true,
+                "Editable": false,
+                "TrackVisible": false,
+                "Required": false,
+                "Printable": true
+              }
+            ],
+            "DuplicatedParticipantPolicy": 0,
+            "NoParticipantPolicy": 0,
+            "AllowedTime": "",
+            "TimeoutRemindContent": "",
+            "TimeoutMode": 1,
+            "Participants": "",
+            "ParticipantSourceType": 0,
+            "DisplayName": "抄送节点",
+            "DefaultDisplayName": "抄送节点",
+            "ToolTipText": "Circulate",
+            "ActivityCode": "Activity112",
+            "SortKey": 0,
+            "Height": 42,
+            "Width": 122,
+            "X": 252,
+            "Y": 498,
+            "IsActivity": true,
+            "IsRule": false,
+            "IsEnd": false,
+            "IsApproveActivity": false,
+            "IsClient": false,
+            "EntryCondition": 0,
+            "FullName": "抄送节点[Activity112]",
+            "FontSize": 14,
+            "FontColor": "",
+            "Id": 112
           }
         ],
-        "properties": {}
-      }
-    },
-    "name": "UNKNOWN",
-    "nodeId": "Xie5_X0cU",
-    "prevId": "sid-startevent",
-    "properties": {
-      "actionerRules": [
-        {
-          "select": [
-            "allStaff"
-          ],
-          "isEmpty": false,
-          "range": {
-            "approvals": [],
-            "labels": []
+        "Rules": [
+          {
+            "DisplayName": "",
+            "IsActivity": false,
+            "IsRule": true,
+            "PreActivityCode": "Activity2",
+            "PostActivityCode": "Activity84",
+            "Exclusive": false,
+            "FixedPoint": false,
+            "TextX": 0,
+            "TextY": 0,
+            "Points": [
+              "252,72",
+              "252,103"
+            ],
+            "FormulaText": "",
+            "Formula": "",
+            "FontSize": 11,
+            "FontColor": "",
+            "Id": 87
           },
-          "type": "target_select",
-          "key": "manual_L8Ya_dJxs",
-          "multi": 1
+          {
+            "DisplayName": "",
+            "IsActivity": false,
+            "IsRule": true,
+            "PreActivityCode": "Activity84",
+            "PostActivityCode": "Activity100",
+            "Exclusive": false,
+            "FixedPoint": false,
+            "TextX": 0,
+            "TextY": 0,
+            "Points": [
+              "252,145",
+              "252,199"
+            ],
+            "FormulaText": "",
+            "Formula": "",
+            "FontSize": 0,
+            "FontColor": "",
+            "Id": 101
+          },
+          {
+            "DisplayName": "",
+            "IsActivity": false,
+            "IsRule": true,
+            "PreActivityCode": "Activity100",
+            "PostActivityCode": "Activity103",
+            "Exclusive": false,
+            "FixedPoint": false,
+            "TextX": 0,
+            "TextY": 0,
+            "Points": [
+              "313,220",
+              "476,220",
+              "476,294"
+            ],
+            "FormulaText": "",
+            "Formula": "",
+            "FontSize": 0,
+            "FontColor": "",
+            "Id": 105
+          },
+          {
+            "DisplayName": "",
+            "IsActivity": false,
+            "IsRule": true,
+            "PreActivityCode": "Activity100",
+            "PostActivityCode": "Activity102",
+            "Exclusive": false,
+            "FixedPoint": false,
+            "TextX": 0,
+            "TextY": 0,
+            "Points": [
+              "191,220",
+              "135,220",
+              "135,280"
+            ],
+            "FormulaText": "",
+            "Formula": "",
+            "FontSize": 0,
+            "FontColor": "",
+            "Id": 106
+          },
+          {
+            "DisplayName": "",
+            "IsActivity": false,
+            "IsRule": true,
+            "PreActivityCode": "Activity102",
+            "PostActivityCode": "Activity107",
+            "Exclusive": false,
+            "FixedPoint": false,
+            "TextX": 0,
+            "TextY": 0,
+            "Points": [
+              "74,301",
+              "10,301",
+              "10,399",
+              "30,399"
+            ],
+            "FormulaText": "",
+            "Formula": "",
+            "FontSize": 0,
+            "FontColor": "",
+            "Id": 108
+          },
+          {
+            "DisplayName": "",
+            "IsActivity": false,
+            "IsRule": true,
+            "PreActivityCode": "Activity107",
+            "PostActivityCode": "Activity112",
+            "Exclusive": false,
+            "FixedPoint": false,
+            "TextX": 0,
+            "TextY": 0,
+            "Points": [
+              "91,420",
+              "91,498",
+              "191,498"
+            ],
+            "FormulaText": "",
+            "Formula": "",
+            "FontSize": 0,
+            "FontColor": "",
+            "Id": 109
+          },
+          {
+            "DisplayName": "",
+            "IsActivity": false,
+            "IsRule": true,
+            "PreActivityCode": "Activity103",
+            "PostActivityCode": "Activity112",
+            "Exclusive": false,
+            "FixedPoint": false,
+            "TextX": 0,
+            "TextY": 0,
+            "Points": [
+              "476,336",
+              "476,498",
+              "313,498"
+            ],
+            "FormulaText": "",
+            "Formula": "",
+            "FontSize": 0,
+            "FontColor": "",
+            "Id": 111
+          },
+          {
+            "DisplayName": "",
+            "IsActivity": false,
+            "IsRule": true,
+            "PreActivityCode": "Activity102",
+            "PostActivityCode": "Activity112",
+            "Exclusive": false,
+            "FixedPoint": false,
+            "TextX": 0,
+            "TextY": 0,
+            "Points": [
+              "196,301",
+              "252,301",
+              "252,477"
+            ],
+            "FormulaText": "",
+            "Formula": "",
+            "FontSize": 0,
+            "FontColor": "",
+            "Id": 113
+          },
+          {
+            "DisplayName": "",
+            "IsActivity": false,
+            "IsRule": true,
+            "PreActivityCode": "Activity112",
+            "PostActivityCode": "Activity114",
+            "Exclusive": false,
+            "FixedPoint": false,
+            "TextX": 0,
+            "TextY": 0,
+            "Points": [
+              "252,519",
+              "252,561"
+            ],
+            "FormulaText": "",
+            "Formula": "",
+            "FontSize": 0,
+            "FontColor": "",
+            "Id": 115
+          },
+          {
+            "DisplayName": "",
+            "IsActivity": false,
+            "IsRule": true,
+            "PreActivityCode": "Activity114",
+            "PostActivityCode": "Activity4",
+            "Exclusive": false,
+            "FixedPoint": false,
+            "TextX": 0,
+            "TextY": 0,
+            "Points": [
+              "252,603",
+              "252,633"
+            ],
+            "FormulaText": "",
+            "Formula": "",
+            "FontSize": 0,
+            "FontColor": "",
+            "Id": 116
+          }
+        ],
+        "InstanceName": "",
+        "WorkflowName": "CZQ表单",
+        "Serialized": false,
+        "ObjectId": "7732ca37-4785-4ddf-b381-bf7b21162e10",
+        "ParentObjectId": null,
+        "ParentPropertyName": null,
+        "ParentIndex": 0,
+        "DirtyProperties": []
+      },
+      "ActivityTemplateConfigs": [
+        {
+          "ActivityType": 0,
+          "DisplayName": "开始",
+          "DefaultDisplayName": "开始",
+          "ToolTipText": "Start",
+          "ActivityCode": null,
+          "SortKey": 0,
+          "Height": 0,
+          "Width": 0,
+          "X": 0,
+          "Y": 0,
+          "IsActivity": true,
+          "IsRule": false,
+          "IsEnd": false,
+          "IsApproveActivity": false,
+          "IsClient": false,
+          "EntryCondition": 1,
+          "FullName": "开始[]",
+          "FontSize": 0,
+          "FontColor": null,
+          "Id": 0
+        },
+        {
+          "ActivityType": 1,
+          "PropertyPermissions": null,
+          "Actions": [
+            {
+              "Code": "Submit",
+              "Name": "提交",
+              "DefaultName": "提交",
+              "IsActive": true,
+              "SortKey": 1,
+              "CommentConfig": null
+            }
+          ],
+          "WorkItemDisplayName": null,
+          "DisplayName": "结束",
+          "DefaultDisplayName": "结束",
+          "ToolTipText": "End",
+          "ActivityCode": null,
+          "SortKey": 0,
+          "Height": 0,
+          "Width": 0,
+          "X": 0,
+          "Y": 0,
+          "IsActivity": true,
+          "IsRule": false,
+          "IsEnd": true,
+          "IsApproveActivity": false,
+          "IsClient": false,
+          "EntryCondition": 1,
+          "FullName": "结束[]",
+          "FontSize": 0,
+          "FontColor": null,
+          "Id": 0
+        },
+        {
+          "ActivityType": 3,
+          "IsFirstActivity": false,
+          "ApproveExit": "100%",
+          "FinishExit": "1",
+          "PermittedActions": {
+            "Flag": 2305,
+            "Forward": true,
+            "Consult": false,
+            "Backward": false,
+            "Choose": false,
+            "Jump": false,
+            "RejectToStart": false,
+            "Reject": false,
+            "RejectToAny": false,
+            "RejectToFixed": false,
+            "SubmitToRejectedActivity": false,
+            "RejectToActivityCodes": null,
+            "CancelIfUnfinished": false,
+            "CancelIfFinished": false,
+            "Retrieve": true,
+            "Cancel": false,
+            "Suspend": false,
+            "ViewInstanceState": true,
+            "AdjustParticipant": false,
+            "Circulate": false,
+            "Recirculate": false,
+            "ViewData": false,
+            "Assist": false,
+            "FinishInstance": false,
+            "PreviewParticipant": false
+          },
+          "ParticipateMethod": 0,
+          "Actions": [
+            {
+              "Code": "Save",
+              "Name": "暂存",
+              "DefaultName": "暂存",
+              "IsActive": true,
+              "SortKey": 0,
+              "CommentConfig": null
+            },
+            {
+              "Code": "Submit",
+              "Name": "提交",
+              "DefaultName": "提交",
+              "IsActive": true,
+              "SortKey": 1,
+              "CommentConfig": null
+            },
+            {
+              "Code": "Forward",
+              "Name": "转交",
+              "DefaultName": "转交",
+              "IsActive": true,
+              "SortKey": 2,
+              "CommentConfig": null
+            }
+          ],
+          "WorkItemDisplayName": null,
+          "PropertyPermissions": null,
+          "DuplicatedParticipantPolicy": 0,
+          "NoParticipantPolicy": 0,
+          "AllowedTime": null,
+          "TimeoutRemindContent": null,
+          "TimeoutMode": 1,
+          "Participants": null,
+          "ParticipateType": 2,
+          "ParticipantSourceType": 0,
+          "DisplayName": "手工",
+          "DefaultDisplayName": "手工",
+          "ToolTipText": "FillSheet",
+          "ActivityCode": null,
+          "SortKey": 0,
+          "Height": 0,
+          "Width": 0,
+          "X": 0,
+          "Y": 0,
+          "IsActivity": true,
+          "IsRule": false,
+          "IsEnd": false,
+          "IsApproveActivity": false,
+          "IsClient": true,
+          "EntryCondition": 0,
+          "FullName": "手工[]",
+          "FontSize": 0,
+          "FontColor": null,
+          "Id": 0
+        },
+        {
+          "ActivityType": 4,
+          "ApproveExit": "100%",
+          "DisapproveExit": "1",
+          "DisapproveExitType": 1,
+          "DisapproveExitActivityCode": null,
+          "FinishExit": "1",
+          "PermittedActions": {
+            "Flag": 67841,
+            "Forward": true,
+            "Consult": false,
+            "Backward": false,
+            "Choose": false,
+            "Jump": false,
+            "RejectToStart": false,
+            "Reject": true,
+            "RejectToAny": false,
+            "RejectToFixed": false,
+            "SubmitToRejectedActivity": false,
+            "RejectToActivityCodes": null,
+            "CancelIfUnfinished": false,
+            "CancelIfFinished": false,
+            "Retrieve": true,
+            "Cancel": false,
+            "Suspend": false,
+            "ViewInstanceState": true,
+            "AdjustParticipant": false,
+            "Circulate": false,
+            "Recirculate": false,
+            "ViewData": false,
+            "Assist": false,
+            "FinishInstance": false,
+            "PreviewParticipant": false
+          },
+          "ParticipateMethod": 0,
+          "Actions": [
+            {
+              "Code": "Submit",
+              "Name": "同意",
+              "DefaultName": "同意",
+              "IsActive": true,
+              "SortKey": 0,
+              "CommentConfig": {
+                "Items": [
+                  {
+                    "Code": "Text",
+                    "Name": "审批意见",
+                    "Active": true,
+                    "Require": false
+                  },
+                  {
+                    "Code": "Signature",
+                    "Name": "签名",
+                    "Active": true,
+                    "Require": false
+                  },
+                  {
+                    "Code": "Picture",
+                    "Name": "图片",
+                    "Active": true,
+                    "Require": false
+                  },
+                  {
+                    "Code": "Attachment",
+                    "Name": "附件",
+                    "Active": true,
+                    "Require": false
+                  }
+                ]
+              }
+            },
+            {
+              "Code": "Reject",
+              "Name": "不同意",
+              "DefaultName": "不同意",
+              "IsActive": true,
+              "SortKey": 1,
+              "CommentConfig": {
+                "Items": [
+                  {
+                    "Code": "Text",
+                    "Name": "审批意见",
+                    "Active": true,
+                    "Require": false
+                  },
+                  {
+                    "Code": "Signature",
+                    "Name": "签名",
+                    "Active": true,
+                    "Require": false
+                  },
+                  {
+                    "Code": "Picture",
+                    "Name": "图片",
+                    "Active": true,
+                    "Require": false
+                  },
+                  {
+                    "Code": "Attachment",
+                    "Name": "附件",
+                    "Active": true,
+                    "Require": false
+                  }
+                ]
+              }
+            },
+            {
+              "Code": "Forward",
+              "Name": "转交",
+              "DefaultName": "转交",
+              "IsActive": true,
+              "SortKey": 2,
+              "CommentConfig": null
+            },
+            {
+              "Code": "Save",
+              "Name": "暂存",
+              "DefaultName": "暂存",
+              "IsActive": true,
+              "SortKey": 3,
+              "CommentConfig": null
+            }
+          ],
+          "WorkItemDisplayName": null,
+          "PropertyPermissions": null,
+          "DuplicatedParticipantPolicy": 0,
+          "NoParticipantPolicy": 0,
+          "AllowedTime": null,
+          "TimeoutRemindContent": null,
+          "TimeoutMode": 1,
+          "Participants": null,
+          "ParticipateType": 2,
+          "ParticipantSourceType": 0,
+          "DisplayName": "审批",
+          "DefaultDisplayName": "审批",
+          "ToolTipText": "Approve",
+          "ActivityCode": null,
+          "SortKey": 0,
+          "Height": 0,
+          "Width": 0,
+          "X": 0,
+          "Y": 0,
+          "IsActivity": true,
+          "IsRule": false,
+          "IsEnd": false,
+          "IsApproveActivity": true,
+          "IsClient": true,
+          "EntryCondition": 0,
+          "FullName": "审批[]",
+          "FontSize": 0,
+          "FontColor": null,
+          "Id": 0
+        },
+        {
+          "ActivityType": 2,
+          "DisplayName": "连接点",
+          "DefaultDisplayName": "连接点",
+          "ToolTipText": "Connection",
+          "ActivityCode": null,
+          "SortKey": 0,
+          "Height": 0,
+          "Width": 0,
+          "X": 0,
+          "Y": 0,
+          "IsActivity": true,
+          "IsRule": false,
+          "IsEnd": false,
+          "IsApproveActivity": false,
+          "IsClient": false,
+          "EntryCondition": 1,
+          "FullName": "连接点[]",
+          "FontSize": 0,
+          "FontColor": null,
+          "Id": 0
+        },
+        {
+          "ActivityType": 9,
+          "SchemaCode": null,
+          "WorkflowVersion": 0,
+          "Sync": false,
+          "FinishStartActivity": false,
+          "ParticipateMethod": 0,
+          "DataMaps": null,
+          "ApproveExit": "100%",
+          "DisapproveExit": "1",
+          "FinishExit": "1",
+          "Participants": null,
+          "ParticipateType": 2,
+          "ParticipantSourceType": 0,
+          "DisplayName": "子流程",
+          "DefaultDisplayName": "子流程",
+          "ToolTipText": "SubInstance",
+          "ActivityCode": null,
+          "SortKey": 0,
+          "Height": 0,
+          "Width": 0,
+          "X": 0,
+          "Y": 0,
+          "IsActivity": true,
+          "IsRule": false,
+          "IsEnd": false,
+          "IsApproveActivity": false,
+          "IsClient": false,
+          "EntryCondition": 1,
+          "FullName": "子流程[]",
+          "FontSize": 0,
+          "FontColor": null,
+          "Id": 0
+        },
+        {
+          "ActivityType": 25,
+          "ParticipateType": 3,
+          "WorkItemDisplayName": null,
+          "PropertyPermissions": null,
+          "DuplicatedParticipantPolicy": 0,
+          "NoParticipantPolicy": 0,
+          "AllowedTime": null,
+          "TimeoutRemindContent": null,
+          "TimeoutMode": 1,
+          "Participants": null,
+          "ParticipantSourceType": 0,
+          "DisplayName": "传阅",
+          "DefaultDisplayName": "传阅",
+          "ToolTipText": "Circulate",
+          "ActivityCode": null,
+          "SortKey": 0,
+          "Height": 0,
+          "Width": 0,
+          "X": 0,
+          "Y": 0,
+          "IsActivity": true,
+          "IsRule": false,
+          "IsEnd": false,
+          "IsApproveActivity": false,
+          "IsClient": false,
+          "EntryCondition": 0,
+          "FullName": "传阅[]",
+          "FontSize": 0,
+          "FontColor": null,
+          "Id": 0
         }
       ],
-      "activateType": "ONE_BY_ONE",
-      "agreeAll": false
-    },
-    "type": "approver"
+      "MapTypes": [
+        {
+          "Text": "In",
+          "Value": "0"
+        },
+        {
+          "Text": "Out",
+          "Value": "1"
+        },
+        {
+          "Text": "InOut",
+          "Value": "2"
+        },
+        {
+          "Text": "OutAppend",
+          "Value": "3"
+        }
+      ],
+      "DataItems": [
+        {
+          "Text": "ObjectId",
+          "Value": "ObjectId"
+        },
+        {
+          "Text": "创建人",
+          "Value": "CreatedBy",
+          "ItemType": ""
+        },
+        {
+          "Text": "拥有者",
+          "Value": "OwnerId",
+          "ItemType": ""
+        },
+        {
+          "Text": "所属部门",
+          "Value": "OwnerDeptId",
+          "ItemType": ""
+        },
+        {
+          "Text": "创建时间",
+          "Value": "CreatedTime",
+          "ItemType": ""
+        },
+        {
+          "Text": "修改时间",
+          "Value": "ModifiedTime",
+          "ItemType": ""
+        },
+        {
+          "Text": "单行文本",
+          "Value": "F0000001",
+          "ItemType": ""
+        }
+      ],
+      "SystemDataItems": {
+        "Text": "系统数据",
+        "ChildNodes": [
+          {
+            "Text": "AllParticipants",
+            "ChildNodes": []
+          },
+          {
+            "Text": "InstanceId",
+            "ChildNodes": []
+          },
+          {
+            "Text": "InstanceName",
+            "ChildNodes": []
+          },
+          {
+            "Text": "OriginateTime",
+            "ChildNodes": []
+          },
+          {
+            "Text": "OriginateDate",
+            "ChildNodes": []
+          },
+          {
+            "Text": "OriginateFullTime",
+            "ChildNodes": []
+          },
+          {
+            "Text": "CurrentTime",
+            "ChildNodes": []
+          },
+          {
+            "Text": "SchemaCode",
+            "ChildNodes": []
+          },
+          {
+            "Text": "WorkflowVersion",
+            "ChildNodes": []
+          },
+          {
+            "Text": "ActivityCode",
+            "ChildNodes": []
+          },
+          {
+            "Text": "LastParticipant",
+            "ChildNodes": [
+              {
+                "Text": "LastParticipant",
+                "ChildNodes": []
+              },
+              {
+                "Text": "LastParticipant.Email",
+                "ChildNodes": []
+              },
+              {
+                "Text": "LastParticipant.UserCode",
+                "ChildNodes": []
+              },
+              {
+                "Text": "LastParticipant.OU",
+                "ChildNodes": []
+              },
+              {
+                "Text": "LastParticipant.UserID",
+                "ChildNodes": []
+              },
+              {
+                "Text": "LastParticipant.FullName",
+                "ChildNodes": []
+              },
+              {
+                "Text": "LastParticipant.UserName",
+                "ChildNodes": []
+              },
+              {
+                "Text": "LastParticipant.Manager",
+                "ChildNodes": []
+              },
+              {
+                "Text": "LastParticipants",
+                "ChildNodes": []
+              }
+            ]
+          },
+          {
+            "Text": "Originator",
+            "ChildNodes": [
+              {
+                "Text": "Originator",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.Birthday",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.DepartureDate",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.EntryDate",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.UserID",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.Email",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.LoginName",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.UserName",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.FullName",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.Mobile",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.OfficePhone",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.OU",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.OUName",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.OUFullName",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.EmployeeNumber",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.IDNumber",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.EmployeeRank",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.Title",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.OUManager",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.DirectOUManager",
+                "ChildNodes": []
+              },
+              {
+                "Text": "Originator.Manager",
+                "ChildNodes": [
+                  {
+                    "Text": "Originator.Manager.Email",
+                    "ChildNodes": []
+                  },
+                  {
+                    "Text": "Originator.Manager.OU",
+                    "ChildNodes": []
+                  },
+                  {
+                    "Text": "Originator.Manager.UserID",
+                    "ChildNodes": []
+                  },
+                  {
+                    "Text": "Originator.Manager.FullName",
+                    "ChildNodes": []
+                  },
+                  {
+                    "Text": "Originator.Manager.UserName",
+                    "ChildNodes": []
+                  },
+                  {
+                    "Text": "Originator.Manager.Title",
+                    "ChildNodes": []
+                  },
+                  {
+                    "Text": "Originator.Manager.Mobile",
+                    "ChildNodes": []
+                  },
+                  {
+                    "Text": "Originator.Manager.OfficePhone",
+                    "ChildNodes": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Text": "ActivityParticipant",
+            "ChildNodes": [
+              {
+                "Text": "ActivityParticipant",
+                "ChildNodes": []
+              },
+              {
+                "Text": "ActivityParticipant.Email",
+                "ChildNodes": []
+              },
+              {
+                "Text": "ActivityParticipant.Department",
+                "ChildNodes": []
+              },
+              {
+                "Text": "ActivityParticipant.UserID",
+                "ChildNodes": []
+              },
+              {
+                "Text": "ActivityParticipant.FullName",
+                "ChildNodes": []
+              },
+              {
+                "Text": "ActivityParticipant.UserName",
+                "ChildNodes": []
+              },
+              {
+                "Text": "ActivityParticipant.Title",
+                "ChildNodes": []
+              },
+              {
+                "Text": "ActivityParticipant.Manager",
+                "ChildNodes": []
+              }
+            ]
+          },
+          {
+            "Text": "ActivityAllParticipants",
+            "ChildNodes": []
+          }
+        ]
+      },
+      "EffectivePropertyPermission": null,
+      "PrintConfigItems": [
+        {
+          "Text": "公司名称",
+          "Value": "PrintCompanyName"
+        },
+        {
+          "Text": "审批意见",
+          "Value": "PrintComment"
+        },
+        {
+          "Text": "打印人",
+          "Value": "Printer"
+        },
+        {
+          "Text": "打印时间",
+          "Value": "PrintTime"
+        },
+        {
+          "Text": "二维码",
+          "Value": "PrintQrCode"
+        }
+      ],
+      "MappingProperties": []
+    }
   },
-  "name": "发起人",
-  "nodeId": "sid-startevent",
-  "type": "start"
+  "DataType": 0
 }

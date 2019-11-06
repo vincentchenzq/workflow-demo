@@ -5,7 +5,7 @@
     <div class="container">
       <!-- 用于放大缩小 -->
       <div class="box-scale" :style="boxscaleStyle">
-        <RenderNode2 :list="dataJson" />
+        <!-- <RenderNode2 :list="dataJson" /> -->
         <!-- <RenderNode /> -->
         <!-- 发起节点 -->
         <!-- <NodeWrap nodeType="start"></NodeWrap> -->
@@ -27,7 +27,10 @@ import BranchWrap from './components/branchWrap';
 import dataJson from './data.json';
 import RenderNode from './renderNode'
 import RenderNode2 from './renderNode2'
-import './design.css'
+import './design.css';
+import Activity from './Activity';
+import Rule from './Rule';
+import ENodeType from './ENodeType';
 export default {
   name: 'app',
   data() {
@@ -48,6 +51,77 @@ export default {
     }
   },
   created() {
+    console.log(`template data is -----------`)
+    const workflowTemplate = JSON.parse(JSON.stringify(dataJson.ReturnData.Data.WorkflowTemplate));
+    console.log(workflowTemplate);
+    const { Activities, Rules } = workflowTemplate;
+    // 找到开始节点
+    const startNode = Activities.find(item => item.ActivityType === 0);
+    const startCode = startNode.ActivityCode; // 后面的流程没有开始节点，直接就是发起节点
+    const startActivity = Rules.find(item => item.PreActivityCode === startCode).PostActivityCode; // 发起节点的Code
+    const endActivity = Activities.find(item => item.ActivityType === ENodeType.End).ActivityCode; // 结束节点的Code
+    let ids = []; // 用于存放id的数组
+    // 取出Activeties 以及Rules
+    // 过滤一些没用的节点
+    let activities = Activities.filter(activity => {
+      return [ENodeType.Begin, ENodeType.Start, ENodeType.Approve, ENodeType.End, ENodeType.Notifier].includes(activity.ActivityType)
+    })
+    // TODO: 太多没用的数据 先删除一些方便调试
+    activities = activities.map((activity) => {
+      ids.push(activity.Id);
+      return new Activity(activity);
+    })
+    // 过滤一些没用的rules
+    let rules = Rules.filter(rule => {
+      return activities.some(item => item.ActivityCode === rule.PreActivityCode);
+    })
+    // TODO: 太多没用的数据 先删除一些方便调试
+    rules = rules.map((rule) => {
+      ids.push(rule.Id);
+      return new Rule(rule)
+    })
+    const activeMap = {};
+    let typeMap = {
+      3: 'start',
+      4: 'approver',
+      25: 'notifier'
+    }
+    for (let i = 0; i < activities.length; i++) {
+      activities[i].type = typeMap[activities[i].ActivityType]
+      activities[i].children = [];
+      activeMap[activities[i].ActivityCode] = activities[i];
+    }
+    const ruleMap = {}
+    for (let i = 0; i < rules.length; i++) {
+      const { PreActivityCode, PostActivityCode } = rules[i];
+      rules[i].children = [];
+      if (!ruleMap[PreActivityCode]) {
+        ruleMap[PreActivityCode] = [];
+      }
+      ruleMap[PreActivityCode].push(rules[i])
+    }
+    // for (let i = 0; i < rules.length; i++) {
+    //   const { PreActivityCode, PostActivityCode } = rules[i];
+    //   // 说明是分支条件
+    //   if (ruleMap[PreActivityCode].length >= 2) {
+    //     rules[i].type = 'route';
+    //     // let index = ruleMap[PostActivityCode].indexOf(rules[i]);
+    //     rules[i].children.push(activeMap[PostActivityCode]);
+    //     activeMap[PreActivityCode].children.push(rules[i])
+    //   }
+    //   // 表示 为正常节点
+    //   if (ruleMap[PreActivityCode].length === 1) {
+    //     activeMap[PreActivityCode].children.push(activeMap[PostActivityCode]);
+    //   }
+    // }
+
+    console.log(`maxId is------------  ${Math.max(...ids)}`)
+    console.log("SET_FLOWDATA is ----------");
+    console.log(JSON.parse(JSON.stringify(activeMap[startCode])));
+    console.log(`activeMap is ---------`)
+    console.log(activeMap);
+    console.log(`ruleMap is -------------`);
+    console.log(ruleMap)
 
 
   },

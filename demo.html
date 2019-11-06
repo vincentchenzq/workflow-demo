@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #app{
+      border: 1px solid #ddd;
+      height: 100%;
+    }
+    svg{
+      width: 100%;
+      height:100%;
+    }
+    .node{
+      width: 280px;
+      height: 120px;
+      border: 1px solid #ddd;
+    }
+    .line{
+      width: 1px;
+      height: 71px;
+      background: #ddd;
+    }
+    .condition{
+      width: 280px;
+      height: 76px;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    
+    <svg width="100px" height="100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      
+      <path d="M10 10 H 90 V 90 H 10 L 10 10"/>
+
+      <!-- Points -->
+      <circle cx="10" cy="10" r="2" fill="red"/>
+      <circle cx="90" cy="90" r="2" fill="red"/>
+      <circle cx="90" cy="10" r="2" fill="red"/>
+      <circle cx="10" cy="90" r="2" fill="red"/>
+
+    </svg>
+    <div class="node"></div>
+    <div class="line"></div>
+    <div class="condition"></div>
+  </div>
+
+</body>
+</html>
