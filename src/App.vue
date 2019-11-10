@@ -176,20 +176,20 @@ export default {
       if (!nextNodes) {
         return;
       }
-      const ruleContainer = new RuleContainer();
       const len = nextNodes.length;
+      const ruleContainer = new RuleContainer();
       if (len === 1) {
-        if (node.type === 'condition') {
-        } else {
-          node.childNode = activeMap[nextNodes[0].PostActivityCode];
-          getData(node.childNode);
-        }
+        node.childNode = activeMap[nextNodes[0].PostActivityCode];
+        getData(node.childNode);
         return;
       }
       node.childNode = ruleContainer;
       for (let j = 0; j < len; j++) {
         ruleContainer.conditionNodes.push(nextNodes[j]);
-        getData(nextNodes[j]);
+        const nextCode = nextNodes[j];
+        // ruleContainer.childNode =
+        nextNodes[j].childNode = activeMap[nextCode.PostActivityCode];
+        getData(activeMap[nextCode.PostActivityCode]);
       }
     }
 
