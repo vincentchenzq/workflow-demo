@@ -24,7 +24,7 @@
 import Zoom from './components/zoom';
 import NodeWrap from './components/nodeWrap';
 import BranchWrap from './components/branchWrap';
-import dataJson from './data2.json';
+import dataJson from './data.json';
 import RenderNode from './renderNode';
 import RenderNode2 from './renderNode2';
 import './design.css';
@@ -152,11 +152,13 @@ export default {
         return;
       }
       i--;
+      // if (!linesMap[code]) {
+      linesMap[code] = lineArr
+        .filter(l => l.includes(code))
+        .filter(l => !l.includes(endActivity));
+      // }
+      let lines = linesMap[code];
       for (let j = 0; j < nextNodes.length; j++) {
-        if (!linesMap[code]) {
-          linesMap[code] = lineArr.filter(l => l.includes(code));
-        }
-        let lines = linesMap[code];
         for (let k = 0; k < lines.length; k++) {
           lineArr[++i] = getEffectArr(lines[k], null, code);
           getLineArr(nextNodes[j].PostActivityCode, i);
@@ -168,6 +170,7 @@ export default {
     console.log(lineArr);
 
     const tmpStartNode = JSON.parse(JSON.stringify(start));
+    const ruleContainerMap = {};
     function getData(node) {
       const code = node.ActivityCode;
       // 找到下一个点
@@ -184,10 +187,12 @@ export default {
         return;
       }
       node.childNode = ruleContainer;
+      // 将ruleContainer保存到ruleContainerMap中
+      ruleContainerMap[ruleContainer.Id] = ruleContainer;
       for (let j = 0; j < len; j++) {
         ruleContainer.conditionNodes.push(nextNodes[j]);
         const nextCode = nextNodes[j];
-        // ruleContainer.childNode =
+        ruleContainer.childNode = findChild(lineArr, code);
         nextNodes[j].childNode = activeMap[nextCode.PostActivityCode];
         getData(activeMap[nextCode.PostActivityCode]);
       }
@@ -196,6 +201,24 @@ export default {
     getData(tmpStartNode);
     console.log(`startNode is --------`);
     console.log(tmpStartNode);
+
+    // 在二维数组中找到condition的childNode
+    function findChild(lineArr, beginCode) {
+      let result = null;
+      let lines = lineArr.filter(line => line.includes(beginCode));
+      lines = JSON.parse(JSON.stringify(lines));
+      const [first, ...others] = lines.map(element =>
+        trimArr(element, beginCode)
+      );
+      for (let i = 0; i < first.length; i++) {
+        const isExit = others.every(line => line.includes(first[i]));
+        if (isExit) {
+          result = first[i];
+          break;
+        }
+      }
+      return result;
+    }
 
     /**
      *  截取非空数组中指定开始值结束值 并返回新数组
@@ -211,6 +234,15 @@ export default {
       const endIndex = arr.indexOf(end);
       const newArr = [...arr];
       return newArr.slice(beginIndex, endIndex + 1);
+    }
+
+    /**
+     *  将数组中value前的截取调，并返回新数组
+     *  @example
+     *  trimArr([1,2,3,4,5],3) 返回 [4,5]
+     */
+    function trimArr(arr, value) {
+      return [...arr.slice(arr.indexOf(value) + 1)];
     }
   },
   components: {
