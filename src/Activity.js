@@ -3,5 +3,11 @@ export default class Activity {
     this.ActivityCode = ActivityCode;
     this.ActivityType = ActivityType;
     this.Id = Id;
+    this.childNode = null;
+    this.type = 'start';
+
+    // start
+    // notifier
+    // approver
   }
 }

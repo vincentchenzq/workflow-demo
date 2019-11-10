@@ -3,5 +3,7 @@ export default class Rule {
     this.PostActivityCode = PostActivityCode;
     this.PreActivityCode = PreActivityCode;
     this.Id = Id;
+    this.childNode = null;
+    this.type = 'condition';
   }
 }
