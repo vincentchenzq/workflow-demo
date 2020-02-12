@@ -4,18 +4,18 @@
       <!-- <van-icon name="search" slot="right" /> -->
     </van-nav-bar>
     <div class="home-data">
-      <p class="home-data-name">天然居 2020.02.10</p>
+      <p class="home-data-name">{{$store.state.village_name}}  {{all_data.today}}</p>
       <ul>
         <li>
-          <label style="color:#ff5148">10</label>
+          <label style="color:#ff5148">{{all_data.today_new}}</label>
           <p>今日新登记</p>
         </li>
         <li>
-          <label>10</label>
+          <label>{{all_data.out_sum}}</label>
           <p>出门总计（次）</p>
         </li>
         <li>
-          <label>10</label>
+          <label>{{all_data.in_sum}}</label>
           <p>进门总计（次）</p>
         </li>
       </ul>
@@ -37,10 +37,23 @@
 </template>
 
 <script>
+import { Toast } from 'vant';
+import { sum_footfall } from '../apis/index';
 export default {
   name: 'HelloWorld',
   props: {
     msg: String,
+  },
+  data(){
+    return {
+      all_data:{}
+    }
+  },
+  created(){
+    sum_footfall({token:this.$store.state.token}).then(response=>{
+      console.log(response);
+      this.all_data=response.data;
+    })
   },
   methods: {
     travel: function() {

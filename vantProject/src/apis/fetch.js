@@ -16,7 +16,7 @@ let fetch = axios.create({
   },
 });
 
-axios.interceptors.request.use(
+fetch.interceptors.request.use(
   config => config,
 
   error => {
@@ -26,10 +26,10 @@ axios.interceptors.request.use(
 
 // respone拦截器
 
-axios.interceptors.response.use(
+fetch.interceptors.response.use(
   response => {
-    console.log(response);
-    if (response.status === 200 && response.data.code === 1) {
+    console.log(1);
+    if (response.status === 200 && response.data.code === 0) {
       // if (response.status === 200) {
       return response.data;
     }

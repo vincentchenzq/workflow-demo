@@ -2,17 +2,26 @@
   <div>
     <van-cell-group title="房间号">
       <span>天然居</span>-
-      <input readonly class="floor" @click="showModal = true" />栋-
+      <input readonly class="floor" @click="building_list" />栋-
       <input @input="handleInput" />
       <person-info v-for="(item, index) in personList" :key="index" />
     </van-cell-group>
     <van-popup v-model="showModal" position="bottom" :style="{ height: '30%' }">
-      <van-picker :columns="columns" @change="onChange" />
+      <!-- <van-picker :columns="columns" @change="onChange" /> -->
+      <van-picker
+        show-toolbar
+        title="请选择楼栋"
+        :columns="columns"
+        @cancel="onCancel"
+        @confirm="onConfirm"
+      />
     </van-popup>
   </div>
 </template>
 
 <script>
+import { Toast } from 'vant';
+import { building_list,room_list } from '../apis/index';
 import debounce from 'lodash.debounce';
 // import throttle from 'lodash.throttle';
 
@@ -27,7 +36,8 @@ export default {
   data() {
     return {
       showModal: false,
-      columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9],
+      building:[],//楼宇列表
+      columns: [],
     };
   },
   methods: {
@@ -36,8 +46,24 @@ export default {
     },
     search(va) {
       console.log(va);
+      room_list({token:this.$store.state.token,building_id:1,keyword:102}).then(response=>{
+        this.columns=response.data;
+        console.log(response.data)
+      })
     },
-    onChange() {},
+    building_list(){
+      this.showModal=true;
+      building_list({token:this.$store.state.token}).then(response=>{
+        this.columns=response.data;
+      })
+    },
+    onConfirm(value, index) {
+      Toast(`当前值：${value}, 当前索引：${index}`);
+      this.showModal=false;
+    },
+    onCancel() {
+      this.showModal=false;
+    }
   },
   mounted() {
     this.search = debounce(this.search, 300);

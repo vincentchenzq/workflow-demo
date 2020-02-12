@@ -4,7 +4,9 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->
-    <router-view />
+    <keep-alive :include="includeList">
+      <router-view />
+    </keep-alive>
 
     <van-tabbar route>
       <van-tabbar-item replace to="/" icon="wap-home-o">
@@ -16,6 +18,16 @@
     </van-tabbar>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      includeList:['Travel']
+    }
+  }
+}
+</script>
 
 <style lang="less">
 #app {

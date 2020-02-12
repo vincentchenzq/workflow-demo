@@ -3,8 +3,8 @@
   <div class="travel">
     <van-nav-bar title="出行登记" left-text="返回" left-arrow @click-left="onClickLeft"></van-nav-bar>
     <div class="card">
-      <van-field v-model="queryCondition.carNo" label="车牌号" />
-      <van-cell title="出行通道" is-link arrow-direction="down" v-model="queryCondition.travelChannel" />
+      <van-field v-model="queryCondition.car_number" label="车牌号" />
+      <van-cell title="出行通道" @click="showModal = true" is-link arrow-direction="down" v-model="queryCondition.travelChannel" />
       <van-field v-model="queryCondition.travelTime" label="出行时间" />
     </div>
     <div class="travel-title">
@@ -14,7 +14,9 @@
     <div class="card">
       <travel-info v-for="(item,index) in userInfo" :key="index" />
     </div>
-    <van-popup v-model="showModal">内容</van-popup>
+    <van-popup v-model="showModal" position="bottom">
+      <van-picker :columns="$store.state.gates_list" @change="onChangeGate" />
+    </van-popup>
     <van-button type="info" size="large">确认</van-button>
     <van-button type="primary" size="normal">普通按钮</van-button>
   </div>
@@ -24,11 +26,13 @@
 import TravelInfo from '../components/travelInfo';
 
 export default {
+  name:'Travel',
   data() {
     return {
       queryCondition: {
-        carNo: '', // 车牌号
+        car_number: '', // 车牌号
         travelChannel: '', // 通道
+        people:{},
         travelTime: format(new Date()),
       },
       userInfo: [1, 2, 3],
@@ -41,6 +45,10 @@ export default {
       // 用下面的更好一点
       this.$router.back();
     },
+    onChangeGate(val,value) {
+      this.queryCondition.travelChannel = value;
+      this.showModal= false;
+    }
   },
   components: {
     TravelInfo,

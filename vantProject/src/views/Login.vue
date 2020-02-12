@@ -28,11 +28,20 @@ export default {
             phone:this.phone,
             password:this.password
         }).then(response=>{
+            const data = response.data;
+            const token = data.token;
+            const village_name = data.village_name;
+            const gates_list = data.gates_list;
+            this.$store.commit('setToken',token)
+            this.$store.commit('setVillageName',village_name)
+            this.$store.commit('setGatesList',gates_list)
             this.$router.push({
                 path: "/"
               });
         }
-        )
+        ).catch(response => {
+              Toast.fail(response.data.msg);
+            });
     }
   },
 };

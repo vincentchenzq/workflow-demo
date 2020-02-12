@@ -10,7 +10,7 @@ import { Toast } from 'vant';
 export default {
     methods:{
       onClickLeft() {
-        this.$router.go(-1);
+        this.$router.back();
       },
     }
 }

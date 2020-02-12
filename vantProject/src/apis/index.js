@@ -9,6 +9,15 @@ export function login(data) {
   });
 }
 
+// 获取每日流量统计
+export function sum_footfall(data) {
+  return fetch({
+    url: '/api/footfall/user/sum_footfall',
+    method: 'POST',
+    data: data || {},
+  });
+}
+
 // 获取房间列表
 export function room_list(data) {
   return fetch({
@@ -19,6 +28,15 @@ export function room_list(data) {
 }
 
 // 出门登记
+export function out_record(data) {
+  return fetch({
+    url: '/api/footfall/user/out_record',
+    method: 'POST',
+    data: data || {},
+  });
+}
+
+// 获取楼宇列表
 export function building_list(data) {
   return fetch({
     url: '/api/footfall/user/building_list',
