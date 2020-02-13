@@ -1,21 +1,17 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
     <keep-alive :include="includeList">
       <router-view />
     </keep-alive>
 
-    <van-tabbar route>
+    <!-- <van-tabbar route>
       <van-tabbar-item replace to="/" icon="wap-home-o">
         首页
       </van-tabbar-item>
       <van-tabbar-item replace to="/about" icon="contact">
         我的
       </van-tabbar-item>
-    </van-tabbar>
+    </van-tabbar> -->
   </div>
 </template>
 
@@ -23,7 +19,7 @@
 export default {
   data() {
     return {
-      includeList:['Travel']
+      includeList:['Travel','Enter']
     }
   }
 }

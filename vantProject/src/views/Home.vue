@@ -33,6 +33,8 @@
         <span>进门登记</span>
       </li>
     </ul>
+
+    <van-button type="primary" color="#ff716a" size="large" class="quit" @click="quit">退出登陆</van-button>
   </div>
 </template>
 
@@ -66,6 +68,11 @@ export default {
         path: `/Enter`,
       });
     },
+    quit:function(){
+      this.$router.push({
+        path:`/Login`
+      })
+    }
   },
 };
 </script>
@@ -133,6 +140,15 @@ export default {
         font-weight: bold;
       }
     }
+  }
+  .quit{
+    width: 345px;
+    position: fixed;
+    bottom:100px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 15px;
   }
 }
 </style>
