@@ -14,7 +14,7 @@
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
     "px2rem-loader": "^0.1.9",
-    "qs": "^6.9.1",
+    "qs": "^6.9.7",
     "vant": "^2.4.7",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",
